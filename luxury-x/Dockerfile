@@ -8,10 +8,6 @@ RUN npm install
 
 COPY . .
 
-# Inject env variable at BUILD time
-ARG REACT_APP_API_URL
-ENV REACT_APP_API_URL=$REACT_APP_API_URL
-
 RUN npm run build
 
 # -------- RUN STAGE --------
