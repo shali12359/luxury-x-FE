@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import CarouselMain from '../components/Carousels';
 import { useState, useEffect } from 'react';
 import { ProductApi } from "../api/ProductApi";
+import { Link } from "react-router-dom";
 
 function Home() {
     const [mobiles, setMobiles] = useState([]);
@@ -63,7 +64,7 @@ function Home() {
             <Row className='mt-4'>
                 <Col><h3>Mobile Phones</h3></Col>
                 <Row>
-                    <Col className="text-end me-4"><Button variant="link"  href={`/products/${categoryMobile}`}>See More</Button></Col>
+                    <Col className="text-end me-4"><Link to={`/products/${categoryMobile}`}>See More</Link></Col>
                 </Row>
                 <Row className='mt-3 mb-3 justify-content-md-center'>
                     {
@@ -78,7 +79,7 @@ function Home() {
             <Row className='mt-4'>
                 <Col><h3>Laptops</h3></Col>
                 <Row>
-                    <Col className="text-end me-4"><Button variant="link"  href={`/products/${categoryLaptops}`}>See More</Button></Col>
+                    <Col className="text-end me-4"><Link to={`/products/${categoryLaptops}`}>See More</Link></Col>
                 </Row>
                 <Row className='mt-3 mb-3 justify-content-md-center'>
                     {
@@ -93,7 +94,7 @@ function Home() {
             <Row className='mt-4'>
                 <Col><h3>Smart Watches</h3></Col>
                 <Row>
-                    <Col className="text-end me-4"><Button variant="link" href={`/products/${categoryWatches}`}>See More</Button></Col>
+                    <Col className="text-end me-4"><Link to={`/products/${categoryWatches}`}>See More</Link></Col>
                 </Row>
                 <Row className='mt-3 mb-3 justify-content-md-center'>
                     {
